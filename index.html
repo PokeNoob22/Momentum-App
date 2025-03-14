@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <title>Momentum App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Task Icon -->
+<div id="tasksIcon">
+  
+  <i class="fa-solid fa-list-check"></i>
+
+</div>
+
+<!-- Task Container -->
+<div id="taskContainer" class="hidden">
+  <!-- Adding task story -->
+  <input type="text" id="taskInput" placeholder="Add new task">
+  <button id="addButton">Add</button>
+  <button id="removeButton">Remove</button>
+  <div id="taskList"></div>
+</div>
+
+ <!-- Current time story -->
+ <div id="time"></div>
+
+  <!-- Greetings and name story -->
+  <h1 class="header">Good Evening, ______</h1>
+  <input type="text" id="name" placeholder="Enter name here">
+  <button id="editButton">Welcome</button>
+
+  <!-- Random quote -->
+  <div id="randomQuote"></div>
+
+  <div id="quoteIcon">
+  
+    <i class="fa-solid fa-quote-left"></i>
+  
+  </div>
+
+  <!-- Container for quote input -->
+<div id="quoteInputContainer" style="display: none;">
+  <input type="text" id="quoteInput" placeholder="Enter new quote">
+  <button id="addQuoteButton">Add Quote</button>
+</div>
+
+<div id="focusIcon">
+
+  <i class="fa-solid fa-bullseye"></i>
+
+</div>
+
+<!-- Input container -->
+<div id="focusInputContainer" class="hidden">
+  <input type="text" id="focusInput" placeholder="Enter your focus">
+  <button id="saveFocusButton">Save</button>
+</div>
+
+<h2 id="focusDisplay" class="hidden"></h2>
+
+
+
+
+  <script src="script.js"> </script>
+
+  <div class="background-container">
+    <img src="background1.jpg" alt="Background 1">
+    <img src="background2.jpg" alt="Background 2">
+    <img src="background3.jpg" alt="Background 3">
+    <img src="background4.jpg" alt="Background 4">
+</div>
+
+</body>
+</html>
