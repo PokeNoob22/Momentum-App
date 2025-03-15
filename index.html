@@ -24,13 +24,16 @@
   <div id="taskList"></div>
 </div>
 
- <!-- Current time story -->
- <div id="time"></div>
+<div id="timeContainer">
+  <div id="time12"></div>
+</div>
+
 
   <!-- Greetings and name story -->
-  <h1 class="header">Good Evening, ______</h1>
-  <input type="text" id="name" placeholder="Enter name here">
-  <button id="editButton">Welcome</button>
+  <h1 class="header">Good Evening, <span id="displayName">Click to Enter Name</span></h1>
+
+  <input type="text" id="name">
+  <button id="editButton"></button>
 
   <!-- Random quote -->
   <div id="randomQuote"></div>

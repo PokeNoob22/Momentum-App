@@ -66,13 +66,29 @@ function editName() {
 
 document.getElementById("editButton").addEventListener("click", editName);
 
-let time = document.getElementById("time");
+// let time = document.getElementById("time");
 
-let date = new Date();
+// let date = new Date();
 
-console.log(date.getHours());
-console.log(date.getMinutes());
-time.textContent = `${date.getHours()}:${date.getMinutes()}`;
+// console.log(date.getHours());
+// console.log(date.getMinutes());
+// time.textContent = `${date.getHours()}:${date.getMinutes()}`;
+
+function updateTime() {
+    let now = new Date();
+    
+    let hours = now.getHours() % 12 || 12;
+    let minutes = now.getMinutes().toString().padStart(2, "0");
+    let ampm = now.getHours() >= 12 ? "PM" : "AM"; 
+    
+    document.getElementById("time12").textContent = `${hours}:${minutes} ${ampm}`;
+}
+
+// Update clock every second
+setInterval(updateTime, 1000);
+updateTime();
+
+
 
 
 const quotes = [
@@ -135,5 +151,40 @@ function saveFocus() {
     }
 }
 
+document.getElementById("displayName").addEventListener("click", function editName() {
+    let nameSpan = this;
+    let currentName = nameSpan.textContent;
+
+    let input = document.createElement("input");
+    input.type = "text";
+    input.value = (currentName === "Click to Enter Name") ? "" : currentName;
+    input.id = "nameInput";
+
+    nameSpan.replaceWith(input);
+    input.focus();
+
+    input.addEventListener("blur", saveName);
+    input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            saveName();
+        }
+    });
+
+    function saveName() {
+        let newName = input.value.trim() || "Click to Enter Name";
+        let newSpan = document.createElement("span");
+        newSpan.id = "displayName";
+        newSpan.textContent = newName;
+
+        // Reattach the click event listener
+        newSpan.addEventListener("click", editName);
+
+        input.replaceWith(newSpan);
+    }
+});
+
+
+
 document.getElementById("focusIcon").addEventListener("click", toggleFocusInput);
 document.getElementById("saveFocusButton").addEventListener("click", saveFocus);
+

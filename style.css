@@ -247,3 +247,24 @@ button {
     padding: 5px;
     outline: none;
 }
+
+.editable {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#timeContainer {
+    text-align: center;
+    font-size: 150px;
+    font-weight: bold;
+    background: none;
+    padding: 10px 20px;
+}
+
+#time24, #time12 {
+    display: block;
+}
+
+#editButton{
+    background-color: transparent;
+}
