@@ -201,7 +201,7 @@ button {
     color: #ffffff;
     text-align: center;
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     width: 20%;
     
     animation: goldGlow 2s infinite alternate; 
@@ -222,7 +222,7 @@ button {
 
 #focusDisplay {
     position: fixed;
-    bottom: 20px; /* Moves it to the bottom */
+    top: 20px; /* Moves it to the bottom */
     left: 50%; /* Centers it horizontally */
     transform: translateX(-50%); /* Ensures true centering */
     font-size: 25px;
